@@ -1,0 +1,35 @@
+{% extends 'TwilBundle::base.html.twig' %}
+
+{% block body %}
+    <h1>Test de développement Symfony 2</h1>
+    <div class="alert alert-danger">
+        <p>Régles :</p>
+        <ul>
+            <li>Interdiction de modifier le controlleur ou de supprimer du code existant.</li>
+            <li>Il n'y a pas besoin de créer de nouveaux fichiers.</li>
+        </ul>
+    </div>
+    <h3>Rendre le code fonctionnel :</h3>
+    <ul  class="list-group">
+        <li  class="list-group-item">Créer les tables avec la console</li>
+        <li  class="list-group-item">Déclarer la classe de gestion de l'entité produit : <em>TwilBundle\DatabaseManager\ProductManager</em> en tant que service : <em>"product.manager"</em>.</li>
+        <li  class="list-group-item">Implémenter les fonctions de cette classe.</li>
+    </ul>
+    <h3>Ajouter une fonctionnalité :</h3>
+    <ul  class="list-group">
+        <li  class="list-group-item">
+            Ajouter un champ prix au produit: 
+            <ul>
+                <li>Il peut etre édité via le formulaire</li>
+                <li>Il doit être visible sur la page <em>/product/{id}</em></li>
+            </ul>
+        </li>
+   </ul>
+    <div class="alert alert-warning">
+        <p>Conseils: </p>
+        <ul>
+            <li>Pour les utilisateur de phpstorm, Netbeans ne sauvegarde pas automatiquement les fichiers (penser aux ctrl + S)</li>
+        </ul>
+    </div>
+{% endblock %}
+

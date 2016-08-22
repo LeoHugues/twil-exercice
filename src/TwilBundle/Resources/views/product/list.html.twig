@@ -1,0 +1,18 @@
+{% extends 'TwilBundle::base.html.twig' %}
+
+{% block body %}
+    <h1>Liste des produits</h1>
+    {% if products is not null %}
+        <ul class="list-group">
+        {% for product in products %}
+            <li  class="list-group-item">
+                <div class="col-md-2 col-sm-3 col-xs-4">{{product.name}}</div> 
+                <a class="btn btn-default" href="{{ path('show_product', {'id' : product.id}) }}">Afficher</a>
+                <a class="btn btn-default" href="{{ path('update_product', {'id' : product.id}) }}">Editer</a>
+            </li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+    <a href="{{path("create_product")}}" class="btn btn-default"> Créer un nouveau produit</a>
+{% endblock %}
+
